@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+    animation: slideDown 1s ease;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* GAME SECTION */
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    background: #2f2f4f;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: fadeUp 1s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #ffd700;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #ffea00;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* ANIMATION */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
